@@ -151,4 +151,4 @@ Cellule<T>& Liste<T>::operator=(Cellule<T>* pt)
 
 template class Liste<int>;
 template class Liste<Couleur>;
-template class Liste<SmartPointer<int>>;
+template class Liste<SmartPointer<int> >;

@@ -1,6 +1,7 @@
 .SILENT:
 
-COMPILATEUR = clang++ -m64 -std=c++14
+#COMPILATEUR = clang++ -m64 -std=c++14
+COMPILATEUR = g++ -m64
 FILE = XTremPaint
 OBJ = WindowSDL.o WindowSDLexception.o WindowSDLclick.o Couleur.o Point.o Forme.o Pixel.o Ligne.o Rectangle.o BaseException.o InvalidColorException.o SmartPointer.o ListeBase.o Liste.o ListeTriee.o Iterateur.o Dessin.o
 DEBUG=

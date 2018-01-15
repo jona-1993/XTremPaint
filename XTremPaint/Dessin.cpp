@@ -377,9 +377,11 @@ int Dessin::importCouleurs(const char* filename)
 	{
 		char buffer[200];
 		fichier.getline(buffer, 200);
-		while(!fichier.eof())
+		//while(!fichier.eof())
+		while(fichier.getline(buffer, 200))
 		{
-			fichier.getline(buffer, 200);
+			//fichier.getline(buffer, 200);
+			
 			strtok_r(buffer, ";", &t1);
 			
 			strtok_r(t1, ";", &t2);
@@ -435,9 +437,10 @@ int Dessin::importPixels(const char* filename)
 	{
 		char buffer[200];
 		fichier.getline(buffer, 200);
-		while(!fichier.eof())
+		//while(!fichier.eof())
+		while(fichier.getline(buffer, 200))
 		{
-			fichier.getline(buffer, 200);
+			//fichier.getline(buffer, 200);
 			strtok_r(buffer, ";", &t1);
 			
 			strtok_r(t1, ";", &t2);
@@ -494,9 +497,10 @@ int Dessin::importLignes(const char* filename)
 	{
 		char buffer[200];
 		fichier.getline(buffer, 200);
-		while(!fichier.eof())
+		//while(!fichier.eof())
+		while(fichier.getline(buffer, 200))
 		{
-			fichier.getline(buffer, 200);
+			//fichier.getline(buffer, 200);
 			strtok_r(buffer, ";", &t1);
 			
 			strtok_r(t1, ";", &t2);
@@ -562,9 +566,10 @@ int Dessin::importRectangles(const char* filename)
 	{
 		char buffer[200];
 		fichier.getline(buffer, 200);
-		while(!fichier.eof())
+		//while(!fichier.eof())
+		while(fichier.getline(buffer, 200))
 		{
-			fichier.getline(buffer, 200);
+			//fichier.getline(buffer, 200);
 			strtok_r(buffer, ";", &t1);
 			
 			strtok_r(t1, ";", &t2);
