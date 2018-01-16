@@ -250,7 +250,7 @@ void Forme::Save(std::ofstream & fichier) const
 		{
 			int nb = strlen(id) + 1;
 			fichier.write((char*)&nb, sizeof(int));
-			fichier.write((char*)&id, sizeof(char) * strlen(id) + 1);
+			fichier.write((char*)id, sizeof(char) * strlen(id) + 1);
 			
 		}
 		else

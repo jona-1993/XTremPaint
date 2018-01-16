@@ -268,11 +268,13 @@ void Dessin::Save(std::ofstream & fichier) const
 			
 			switch((*(&itcoul))->getId()[0])
 			{
-				case 'P': ((Pixel*)&itcoul)->Save(fichier);
+				case 'P': ((Pixel*)((&itcoul)->getVal()))->Save(fichier);
 					break;
-				case 'L': ((Ligne*)&itcoul)->Save(fichier);
+				case 'L': ((Ligne*)((&itcoul)->getVal()))->Save(fichier);
+					//((Ligne*)&itcoul)->Save(fichier);
 					break;
-				case 'R': ((Rectangle*)&itcoul)->Save(fichier);
+				case 'R': ((Ligne*)((&itcoul)->getVal()))->Save(fichier);
+					//((Rectangle*)&itcoul)->Save(fichier);
 					break;
 			}
 			
@@ -344,7 +346,7 @@ int Dessin::Load(std::ifstream & fichier)
 					
 					formes.insere(*import);
 					
-					delete(import);
+					//delete(import); // Evidemment, si je delete, pas plus de forme..
 				}
 				else
 				{

@@ -233,6 +233,7 @@ int Ligne::Load(std::ifstream & fichier)
 			Forme::Load(fichier);
 			
 			extremite.Load(fichier);
+			
 			return 1;
 		}
 		else

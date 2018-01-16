@@ -87,7 +87,7 @@ int main()
 				break;
 			case 2: OpenDessin(); 
 				break;
-			case 3: SaveDessin(); // Pointeur this erroné lors du passage dans les méthodes Save -> ça merde
+			case 3: SaveDessin(); // Quand trop de formes (Erreur de Bus OU Erreur de Segmentation)
 				break;
 			case 4: CloseDessin();
 				break;
@@ -207,10 +207,10 @@ void OpenDessin()
 				return;
 			}
 			
-			/*for(int i = 0; i < dessin->getFormes().getNombreElements(); i+=1)
+			for(int i = 0; i < dessin->getFormes().getNombreElements(); i+=1)
 			{
 				dessin->getFormes().getElement(i)->valeur->Dessine();
-			}*/
+			}
 			
 		}
 		else
