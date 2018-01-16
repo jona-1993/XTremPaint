@@ -751,6 +751,13 @@ void RemoveForme()
 	}
 	
 	dessin->setFormes(des);
+	
+	WindowSDL::setBackground(dessin->getBackground().getRouge(), dessin->getBackground().getVert(), dessin->getBackground().getBleu());
+	
+	for(int i = 0; i < dessin->getFormes().getNombreElements(); i+=1)
+	{
+		dessin->getFormes().getElement(i)->valeur->Dessine();
+	}
 }
 
 void ChangeColourForme()
